@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--clr);
+}
+:root{
+    --clr: #222327;
+}
+.navigator{
+    width: 400px;
+    height: 70px;
+    background-color:#fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.navigator ul{
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+    margin: auto;
+}
+.navigator ul li{
+    position: relative;
+    z-index: 1;
+    list-style: none;
+    height: 70px;
+    width: 70px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.navigator ul li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size:1.5em;
+    text-align: center;
+    color: var(--clr);
+    transition: 0.5s ease-in-out;
+    background-color: transparent;
+    background-size: 2em 2em;
+}
+.list:hover a .icon{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    border: 6px solid var(--clr);
+    border-radius: 100%;
+    height: 2em;
+    width: 2em;
+    animation-duration: 0.5s;
+    animation-delay: .5s;
+    animation-name: nav;
+    background-color: rgb(47, 204, 47);
+    transform: translateY(-35px);
+}
+.list:focus a .icon{
+    animation-duration: 0.5s;
+    animation-delay: .5s;
+    animation-name: nav;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    border: 6px solid var(--clr);
+    border-radius: 100%;
+    height: 2em;
+    width: 2em;
+    background-color: rgb(47, 204, 47);
+    transform: translateY(-35px);
+}
+.text{
+    position: absolute;
+    color: var(--clr);
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(20px);
+}
+.list:hover a .text{
+    opacity: 1;
+    transform: translateY(10px);
+    font-size: 1em;
+    font-weight: 600;
+}
+.list:focus a .text{
+    opacity: 1;
+    transform: translateY(10px);
+    font-size: 1em;
+    font-weight: 600;
+}

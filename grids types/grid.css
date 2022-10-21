@@ -1,0 +1,209 @@
+::-webkit-scrollbar{
+    border: solid white 2px;
+    border-radius:8px;
+    background-color: antiquewhite;
+}
+
+::-webkit-scrollbar-thumb{
+    border: solid darkgray 2px;
+    border-radius:8px;
+    background-color: darkgray;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    border: solid gray 2px;
+    border-radius:8px;
+    background-color: gray;
+}
+
+body{
+    background-color: darkkhaki;
+}
+
+.container{
+    margin-top: 50px;
+    padding: 1.5em;
+    display: grid;
+    gap:10px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2fr 2fr; 
+    /* can be witten as grid-template: row / column;
+    grid-template: repeat(2, 2fr) / repeat (3, 1fr);*/
+}
+
+.box1{
+    background-color: orange;
+    border: solid black 3px;
+    overflow: scroll;
+}
+
+.con{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr 5fr 1fr;
+    padding: 1.5em;
+    gap: 5px;
+    grid-template-areas: 
+    "h h h h h h h h h h h"
+    "m m g g g g g g j j j"
+    "m m f f f f f f f f f ";
+}
+
+.head, .footer, .menu, .body {
+    border: solid black 2px;
+    border-radius:6px;
+    background-color:orangered;
+    box-shadow: inset 2px 2px 3px white;
+    padding:5px;
+}
+
+.head:hover, .footer:hover, .menu:hover, .body:hover {
+    border: solid black 2px;
+    border-radius:6px;
+    background-color:rgb(214, 58, 1);
+    box-shadow: inset 2px 2px 3px gray;
+    padding:5px;
+}
+
+.head{
+    /*grid-column-start: 1;
+    grid-column-end: 8;
+    grid-column: 1 / 3;*/
+    grid-area: h;
+}
+
+.body{
+    /*grid-column: 1 / 8;*/
+    grid-area: g;
+}
+
+.menu{
+    /*grid-row: 1/4;
+    grid-column: 8/ -1;*/
+    grid-area:m;
+}
+
+.footer{
+    /*grid-column-start: 1;
+    grid-column-end: 8;*/
+    grid-area:f;
+}
+
+.gridt{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    grid-auto-rows: 2.5rem;
+}
+
+.child{
+    background-color: rgb(0, 255, 21);
+    color: white;
+    text-align: center;
+    align-content: center;
+    border: 3px white solid;
+    border-radius: 5px;
+}
+
+.gridf{
+    display: grid;
+    gap: 0.75rem;
+    grid-template-areas: 
+    'a b c d'
+    'l m m e'
+    'k m m f'
+    'j i h g';
+    grid-template-rows: repeat(4, 25%);
+    grid-template-columns: repeat(4, 25%);
+    --stagger-delay: 100ms;
+}
+@keyframes card{
+    from{
+        opacity: 0;
+        transform: scale(0.3);
+        filter:hue-rotate(180deg);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+        filter:hue-rotate(0);
+    }
+}
+#kid1{
+    grid-area: a;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(1*var(--stagger-delay))
+}
+#kid2{
+    grid-area: b;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(2*var(--stagger-delay))
+}
+#kid3{
+    grid-area: c;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(3*var(--stagger-delay))
+}
+#kid4{
+    grid-area: d;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(4*var(--stagger-delay))
+}
+#kid5{
+    grid-area: e;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(5*var(--stagger-delay))
+}
+#kid6{
+    grid-area: f;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(6*var(--stagger-delay))
+}
+#kid7{
+    grid-area: g;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(7*var(--stagger-delay))
+}
+#kid8{
+    grid-area: h;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(8*var(--stagger-delay))
+}
+#kid9{
+    grid-area: i;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(9*var(--stagger-delay))
+}
+#kid10{
+    grid-area: j;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(10*var(--stagger-delay))
+}
+#kid11{
+    grid-area: k;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(11*var(--stagger-delay))
+}
+#kid12{
+    grid-area: l;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(12*var(--stagger-delay))
+}
+#kid13{
+    grid-area: m;
+    animation: card 700ms ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: calc(13*var(--stagger-delay))
+}
